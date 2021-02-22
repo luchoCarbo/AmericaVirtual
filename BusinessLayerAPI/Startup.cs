@@ -32,7 +32,7 @@ namespace BusinessLayerAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            //services.AddDbContext<TemperatureContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
+            services.AddDbContext<TemperatureContext>(item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
             services.AddTransient<ITemperatureRepository, TemperatureRepository>();
             services.AddTransient<ITemperatureService, TemperatureService>();
         }
