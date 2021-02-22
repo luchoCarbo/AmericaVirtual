@@ -1,0 +1,129 @@
+﻿@model AmericaVirtual.Models.ViewModels.Interfaces.ITemperatureViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h2 class="h2 "><b>SERVICIO DEL CLIMA</b></h2>
+    <hr style="display: block; height: 1px; border: 0; border-top: 1px solid #ff0000; margin: 1em 0; padding: 0;">
+</div>
+
+<div class="row justify-content-around">
+
+    <div style="background-color:white" class="col-5 rounded p-3">
+        <h4 class="h4 text-center" style="color:#4c3aeb">Seleccioná la zona</h4>
+        <hr style="display: block; height: 1px; border: 0; border-top: 1px solid #4c3aeb; margin: 1em 0; padding: 0;">
+
+        <form class="col-12">
+            <div class="form-group">
+                <label for="pais_control">País</label>
+                <select class="form-control" id="pais_control" aria-describedby="pais" placeholder="Seleccione un país">
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ciudad_control">Ciudad</label>
+                <select class="form-control" id="ciudad_control" aria-describedby="ciudad" placeholder="Seleccione una ciudad">
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Buscar" class="form-control bg-danger text-white" id="buscar_control" aria-describedby="buscar" placeholder="Buscar">
+            </div>
+        </form>
+
+    </div>
+
+    <div style="background-color:white" class="col-5 rounded p-3">
+        <h4 class="h4 text-center" style="color:#4c3aeb">Reporte</h4>
+        <hr style="display: block; height: 1px; border: 0; border-top: 1px solid #4c3aeb; margin: 1em 0; padding: 0;">
+
+        <div class="col-12">
+            <div class="row justify-content-between">
+                <div class="col-8">
+                    <small id="paisSeleccionado" class="form-text text-muted">#PaisSeleccionado</small>
+                </div>
+                <div class="col-12">
+                    <h6 id="ciudadSeleccionada" class="form-text text-muted">#CiudadSeleccionada</h6>
+                </div>
+                <div class="col-4">
+                    <h4 id="diaActual" class="form-text text-muted">#DiaActual</h4>
+                    <h4 id="pronostico" class="form-text text-muted">#Pronostico</h4>
+                    <h2 id="grados" style="margin-top:20%; margin-bottom:20%" class="form-text text-muted">#22&#8451;</h2>
+                    <h6 id="gradosFahrenheit " class="form-text text-muted">#GradosFahrenheit </h6>
+                </div>
+                <div class="col-4 text-right">
+                    <span class="fas fa-sun fa-7x"></span>
+                    <small id="precipitaciones" class="form-text text-muted">#precipitationces</small>
+                    <small id="humedad" class="form-text text-muted">#humedad</small>
+                    <small id="viento" class="form-text text-muted">#viento</small>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="row rounded justify-content-center" style="background-color:white; margin-top:5%">
+        <div class="col-2">
+            <div class="border-right">
+                <h6 class="h4" style="color:#4c3aeb">Lunes</h6>
+                <span class="fas fa-cloud-sun fa-7x"></span>
+                <h2 id="grados" style="margin-top:20%; margin-bottom:20%" class="form-text text-muted">#22&#8451;</h2>
+                <h6 id="gradosFahrenheit " class="form-text text-muted">#GradosFahrenheit </h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="border-right">
+                <h6 class="h4" style="color:#4c3aeb">Lunes</h6>
+                <span class="fas fa-cloud-sun fa-7x"></span>
+                <h2 id="grados" style="margin-top:20%; margin-bottom:20%" class="form-text text-muted">#22&#8451;</h2>
+                <h6 id="gradosFahrenheit " class="form-text text-muted">#GradosFahrenheit </h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="border-right">
+                <h6 class="h4" style="color:#4c3aeb">Lunes</h6>
+                <span class="fas fa-cloud-sun fa-7x"></span>
+                <h2 id="grados" style="margin-top:20%; margin-bottom:20%" class="form-text text-muted">#22&#8451;</h2>
+                <h6 id="gradosFahrenheit " class="form-text text-muted">#GradosFahrenheit </h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="border-right">
+                <h6 class="h4" style="color:#4c3aeb">Lunes</h6>
+                <span class="fas fa-cloud-sun fa-7x"></span>
+                <h2 id="grados" style="margin-top:20%; margin-bottom:20%" class="form-text text-muted">#22&#8451;</h2>
+                <h6 id="gradosFahrenheit " class="form-text text-muted">#GradosFahrenheit </h6>
+            </div>
+        </div>
+        <div class="col-2">
+            <div class="">
+                <h6 class="h4" style="color:#4c3aeb">Lunes</h6>
+                <span class="fas fa-cloud-sun fa-7x"></span>
+                <h2 id="grados" style="margin-top:20%; margin-bottom:20%" class="form-text text-muted">#22&#8451;</h2>
+                <h6 id="gradosFahrenheit " class="form-text text-muted">#GradosFahrenheit </h6>
+            </div>
+        </div>
+</div>
+
+    <script src="~/lib/fontawesome-free-5.15.2-web/css/all.css"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="~/lib/fontawesome-free-5.15.2-web/js/all.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#iniciarSesionBoton').click(() => {
+                if (!$('#divBoton').hasClass('show')) {
+                    $('#divBoton').addClass('show');
+                    $('#iniciarSesionCuadro').addClass('show');
+                }
+                else if ($('#divBoton').hasClass('show')) {
+                    $('#divBoton').removeClass('show');
+                    $('#iniciarSesionCuadro').removeClass('show');
+                }
+                
+            });
+        });
+
+    </script>
