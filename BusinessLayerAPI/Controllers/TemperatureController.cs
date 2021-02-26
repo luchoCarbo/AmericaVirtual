@@ -35,6 +35,7 @@ namespace BusinessLayerAPI.Controllers
         [HttpGet]
         public async Task<IActionResult> GetTemperatureById(int id)
         {
+            //test
             if (id == 0)
             {
                 return BadRequest();
